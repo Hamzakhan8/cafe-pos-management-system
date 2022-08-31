@@ -7,7 +7,8 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <title>@yield('title')</title>
     <!-- Favicon icon -->
-  @include('components.csslink')
+    @include('components.csslink')
+
 
 </head>
 <body>
@@ -586,7 +587,24 @@
     ***********************************-->
     <!-- Required vendors -->
 
-@include('components.scripts')
+    <script src="{{asset('vendor/global/global.min.js')}}"></script>
+    <script src="{{asset('vendor/bootstrap-select/dist/js/bootstrap-select.min.js')}}"></script>
+    <script src="{{asset('vendor/chart.js/Chart.bundle.min.js')}}"></script>
+    <script src="{{asset('js/custom.min.js')}}"></script>
+    <script src="{{asset('js/deznav-init.js')}}"></script>
+
+    <!-- Counter Up -->
+    <script src="{{asset('vendor/waypoints/jquery.waypoints.min.js')}}"></script>
+    <script src="{{asset('vendor/jquery.counterup/jquery.counterup.min.js')}}"></script>
+
+    <!-- Apex Chart -->
+    <script src="{{asset('vendor/apexchart/apexchart.js')}}"></script>
+
+    <!-- Chart piety plugin files -->
+    <script src="{{asset('vendor/peity/jquery.peity.min.js')}}"></script>
+
+    <!-- Dashboard 1 -->
+    <script src="{{asset('js/dashboard/dashboard-1.js')}}"></script>
 
 </body>
 </html>
