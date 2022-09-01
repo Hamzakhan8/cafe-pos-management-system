@@ -1,85 +1,55 @@
 <div class="deznav">
     <div class="deznav-scroll">
         <ul class="metismenu" id="menu">
-            <li><a class="has-arrow ai-icon" href="javascript:void()" aria-expanded="false">
-                    <i class="flaticon-381-networking"></i>
+            <li><a  href="{{route('dashboard.index')}}" aria-expanded="false">
+                    <i class="flaticon-381-home"></i>
                     <span class="nav-text">Dashboard</span>
                 </a>
-                <ul aria-expanded="false">
-                    <li><a href="index.html">Dashboard</a></li>
-                    <li><a href="page-analytics.html">Analytics</a></li>
-                    <li><a href="page-review.html">Review</a></li>
-                    <li><a href="page-order.html">Order</a></li>
-                    <li><a href="page-order-list.html">Order List</a></li>
-                    <li><a href="page-general-customers.html">General Customers</a></li>
-                </ul>
-            </li>
-            <li><a class="has-arrow ai-icon" href="javascript:void()" aria-expanded="false">
-                    <i class="flaticon-381-television"></i>
-                    <span class="nav-text">Apps</span>
-                </a>
-                <ul aria-expanded="false">
-                    <li><a href="./app-profile.html">Profile</a></li>
-                    <li><a class="has-arrow" href="javascript:void()" aria-expanded="false">Email</a>
-                        <ul aria-expanded="false">
-                            <li><a href="./email-compose.html">Compose</a></li>
-                            <li><a href="./email-inbox.html">Inbox</a></li>
-                            <li><a href="./email-read.html">Read</a></li>
-                        </ul>
-                    </li>
-                    <li><a href="./app-calender.html">Calendar</a></li>
-                    <li><a class="has-arrow" href="javascript:void()" aria-expanded="false">Shop</a>
-                        <ul aria-expanded="false">
-                            <li><a href="./ecom-product-grid.html">Product Grid</a></li>
-                            <li><a href="./ecom-product-list.html">Product List</a></li>
-                            <li><a href="./ecom-product-detail.html">Product Details</a></li>
-                            <li><a href="./ecom-product-order.html">Order</a></li>
-                            <li><a href="./ecom-checkout.html">Checkout</a></li>
-                            <li><a href="./ecom-invoice.html">Invoice</a></li>
-                            <li><a href="./ecom-customers.html">Customers</a></li>
-                        </ul>
-                    </li>
-                </ul>
-            </li>
-            <li><a class="has-arrow ai-icon" href="javascript:void()" aria-expanded="false">
-                    <i class="flaticon-381-controls-3"></i>
-                    <span class="nav-text">Charts</span>
-                </a>
-                <ul aria-expanded="false">
-                    <li><a href="./chart-flot.html">Flot</a></li>
-                    <li><a href="./chart-morris.html">Morris</a></li>
-                    <li><a href="./chart-chartjs.html">Chartjs</a></li>
-                    <li><a href="./chart-chartist.html">Chartist</a></li>
-                    <li><a href="./chart-sparkline.html">Sparkline</a></li>
-                    <li><a href="./chart-peity.html">Peity</a></li>
-                </ul>
-            </li>
-            <li><a class="has-arrow ai-icon" href="javascript:void()" aria-expanded="false">
-                    <i class="flaticon-381-internet"></i>
-                    <span class="nav-text">Bootstrap</span>
-                </a>
-                <ul aria-expanded="false">
-                    <li><a href="./ui-accordion.html">Accordion</a></li>
-                    <li><a href="./ui-alert.html">Alert</a></li>
-                    <li><a href="./ui-badge.html">Badge</a></li>
-                    <li><a href="./ui-button.html">Button</a></li>
-                    <li><a href="./ui-modal.html">Modal</a></li>
-                    <li><a href="./ui-button-group.html">Button Group</a></li>
-                    <li><a href="./ui-list-group.html">List Group</a></li>
-                    <li><a href="./ui-media-object.html">Media Object</a></li>
-                    <li><a href="./ui-card.html">Cards</a></li>
-                    <li><a href="./ui-carousel.html">Carousel</a></li>
-                    <li><a href="./ui-dropdown.html">Dropdown</a></li>
-                    <li><a href="./ui-popover.html">Popover</a></li>
-                    <li><a href="./ui-progressbar.html">Progressbar</a></li>
-                    <li><a href="./ui-tab.html">Tab</a></li>
-                    <li><a href="./ui-typography.html">Typography</a></li>
-                    <li><a href="./ui-pagination.html">Pagination</a></li>
-                    <li><a href="./ui-grid.html">Grid</a></li>
 
-                </ul>
             </li>
+            <li><a  href="#" aria-expanded="false">
+                    <i class="flaticon-381-television"></i>
+                    <span class="nav-text">POS</span>
+                </a>
+
+            </li>
+
+
             <li><a class="has-arrow ai-icon" href="javascript:void()" aria-expanded="false">
+                <i class="flaticon-381-internet"></i>
+                <span class="nav-text">inventory</span>
+            </a>
+            <ul aria-expanded="false">
+                <li><a href="./ui-typography.html">Typography</a></li>
+                <li><a href="./ui-pagination.html">Pagination</a></li>
+                <li><a href="./ui-grid.html">Grid</a></li>
+
+            </ul>
+        </li>
+        <li><a class="has-arrow ai-icon" href="javascript:void()" aria-expanded="false">
+            <i class="flaticon-381-internet"></i>
+            <span class="nav-text">product</span>
+        </a>
+        <ul aria-expanded="false">
+            <li><a href="./ui-typography.html">Typography</a></li>
+            <li><a href="./ui-pagination.html">Pagination</a></li>
+            <li><a href="./ui-grid.html">Grid</a></li>
+
+        </ul>
+    </li>
+    <li><a class="has-arrow ai-icon" href="javascript:void()" aria-expanded="false">
+        <i class="flaticon-381-internet"></i>
+        <span class="nav-text">reports</span>
+    </a>
+    <ul aria-expanded="false">
+        <li><a href="./ui-typography.html">Typography</a></li>
+        <li><a href="./ui-pagination.html">Pagination</a></li>
+        <li><a href="./ui-grid.html">Grid</a></li>
+
+    </ul>
+</li>
+
+            {{-- <li><a class="has-arrow ai-icon" href="javascript:void()" aria-expanded="false">
                     <i class="flaticon-381-heart"></i>
                     <span class="nav-text">Plugins</span>
                 </a>
@@ -136,17 +106,17 @@
                     </li>
                     <li><a href="./page-lock-screen.html">Lock Screen</a></li>
                 </ul>
-            </li>
+            </li> --}}
         </ul>
 
-        <div class="add-menu-sidebar">
+        {{-- <div class="add-menu-sidebar">
             <img src="images/icon1.png" alt=""/>
             <p>Organize your menus through button bellow</p>
             <a href="javascript:void(0);" class="btn btn-primary btn-block light">+ Add Menus</a>
-        </div>
+        </div> --}}
         <div class="copyright">
-            <p><strong>Davur - Restaurant Admin Dashboard</strong> © 2020 All Rights Reserved</p>
-            <p>Made with <i class="fa fa-heart"></i> by DexignZone</p>
+            <p><strong>phi - Restaurant Admin Dashboard</strong> © 2020 All Rights Reserved</p>
+            <p>Made with <i class="fa fa-heart"></i> by zalmicoding</p>
         </div>
     </div>
 </div>
