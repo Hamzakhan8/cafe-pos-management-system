@@ -1,6 +1,14 @@
 <div class="deznav">
     <div class="deznav-scroll">
-        <ul class="metismenu" id="menu">
+
+     @if (Auth::check()&& Auth::user()->role=='SuperAdmin')
+
+      {
+
+    <ul class="metismenu" id="menu">
+
+
+
             <li><a  href="{{route('dashboard.index')}}" aria-expanded="false">
                     <i class="flaticon-381-home"></i>
                     <span class="nav-text">Dashboard</span>
@@ -36,18 +44,18 @@
             <li><a href="./ui-grid.html">Grid</a></li>
 
         </ul>
-    </li>
-    <li><a class="has-arrow ai-icon" href="javascript:void()" aria-expanded="false">
+     </li>
+     <li><a class="has-arrow ai-icon" href="javascript:void()" aria-expanded="false">
         <i class="flaticon-381-internet"></i>
         <span class="nav-text">reports</span>
-    </a>
-    <ul aria-expanded="false">
+         </a>
+        <ul aria-expanded="false">
         <li><a href="./ui-typography.html">Typography</a></li>
         <li><a href="./ui-pagination.html">Pagination</a></li>
         <li><a href="./ui-grid.html">Grid</a></li>
 
-    </ul>
-</li>
+        </ul>
+        </li>
 
             {{-- <li><a class="has-arrow ai-icon" href="javascript:void()" aria-expanded="false">
                     <i class="flaticon-381-heart"></i>
@@ -107,8 +115,59 @@
                     <li><a href="./page-lock-screen.html">Lock Screen</a></li>
                 </ul>
             </li> --}}
-        </ul>
+    </ul>
+     }
+        @elseif(Auth::check() && Auth::user()->role=='salesperson'){
+    <ul class="metismenu" id="menu">
 
+
+
+            <li><a  href="{{route('dashboard.index')}}" aria-expanded="false">
+                    <i class="flaticon-381-home"></i>
+                    <span class="nav-text">Dashboard</span>
+                </a>
+
+            </li>
+            <li><a  href="#" aria-expanded="false">
+                    <i class="flaticon-381-television"></i>
+                    <span class="nav-text">POS</span>
+                </a>
+
+            </li>
+
+
+
+
+
+    </ul>
+}
+    @elseif(Auth::check() && Auth::user()->role=='inventory')
+ {
+       <ul class="metismenu" id="menu">
+
+
+
+        <li><a  href="{{route('dashboard.index')}}" aria-expanded="false">
+                <i class="flaticon-381-home"></i>
+                <span class="nav-text">Dashboard</span>
+            </a>
+
+        </li>
+        <li><a  href="#" aria-expanded="false">
+                <i class="flaticon-381-television"></i>
+                <span class="nav-text">inventory</span>
+            </a>
+
+        </li>
+
+
+
+
+
+    </ul>
+}
+
+    @endif
         {{-- <div class="add-menu-sidebar">
             <img src="images/icon1.png" alt=""/>
             <p>Organize your menus through button bellow</p>

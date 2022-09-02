@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Auth;
 
 use App\Http\Controllers\Controller;
+use Illuminate\Support\Facades\Auth;
 use App\Providers\RouteServiceProvider;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
 
@@ -27,7 +28,31 @@ class LoginController extends Controller
      * @var string
      */
     // protected $redirectTo = RouteServiceProvider::HOME;
-    
+
+    public function showLoginForm(){
+        return view('login.registeration.login');
+    }
+
+    public function authenticated(){
+
+        if(Auth::user()->role=="SuperAdmin")
+            {
+                 return redirect('/dashboard');
+            }
+        elseif(Auth::user()->role=="salesperson")
+            {
+                return redirect('/dashboard');
+            }
+        elseif(Auth::user()->role=='inventory')
+            {
+                return redirect('/dashboard');
+            }
+        else
+            {
+                return redirect('/home');
+            }
+    }
+
 
     /**
      * Create a new controller instance.
