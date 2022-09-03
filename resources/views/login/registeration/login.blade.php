@@ -58,7 +58,7 @@
                                         </div>
                                     </form>
                                     <div class="new-account mt-3">
-                                        <p>Don't have an account? <a class="text-primary" href="./page-register.html">Sign up</a></p>
+                                        <p>Don't have an account? <a class="text-primary" href="{{route('auth.register.show')}}">Sign up</a></p>
                                     </div>
                                 </div>
                             </div>
