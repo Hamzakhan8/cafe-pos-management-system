@@ -21,9 +21,10 @@ Route::get('/', function () {
 
 Auth::routes();
 Route::prefix('auth')->group(function (){
-    Route::post('login', [LoginController::class, 'login'])->name('auth.login');
-
     Route::get('login-form', [LoginController::class, 'showLoginForm'])->name('auth.login.show');
+
+    Route::post('login', [LoginController::class, 'authenticated'])->name('auth.login');
+
 
     Route::post('register', [RegisterController::class, 'validator'])
     ->name('auth.register');

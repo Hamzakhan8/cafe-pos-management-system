@@ -2,8 +2,11 @@
 
 namespace App\Http\Controllers\Auth;
 
+use App\Models\User;
+use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Hash;
 use App\Providers\RouteServiceProvider;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
 
@@ -33,10 +36,22 @@ class LoginController extends Controller
         return view('login.registeration.login');
     }
 
-    public function authenticated(){
+    public function authenticated(Request $request){
 
-        if(Auth::user()->role=="SuperAdmin")
-            {
+        $request->validate([
+            'email' => ['required'],
+            'password' => ['required']
+        ]);
+        $user=User::where('email',$request->email)->first();
+
+        $check_pass=Hash::check(request('password'),$user->password);
+        if($check_pass==false)
+        {
+            return redirect()->route('home')->with('pass_error','the password does not match');
+        }
+        if(Auth::attempt(['email' => $request['email'], 'password' => $request['password']])
+        && Auth::user()->role == 'SuperAdmin')
+        {
                  return redirect('/dashboard');
             }
         elseif(Auth::user()->role=="salesperson")
