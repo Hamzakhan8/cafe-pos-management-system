@@ -5,6 +5,7 @@ namespace App\Http\Controllers\dashboard;
 use App\Models\User;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use Illuminate\Support\Facades\Auth;
 
 class Usercontroller extends Controller
 {
@@ -59,7 +60,9 @@ class Usercontroller extends Controller
      */
     public function edit($id)
     {
-       return view('Users.edit');
+
+       $user=User::get();
+       return view('Users.edit',compact('user'));
     }
 
     /**
