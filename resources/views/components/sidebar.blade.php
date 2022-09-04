@@ -15,6 +15,16 @@
                 </a>
 
             </li>
+            <li><a class="has-arrow ai-icon" href="javascript:void()" aria-expanded="false">
+                <i class="flaticon-381-user"></i>
+                <span class="nav-text">users</span>
+            </a>
+            <ul aria-expanded="false">
+                <li><a href="{{route('users.index')}}">Viewusers</a></li>
+
+
+            </ul>
+        </li>
             <li><a  href="#" aria-expanded="false">
                     <i class="flaticon-381-television"></i>
                     <span class="nav-text">POS</span>
@@ -23,7 +33,7 @@
             </li>
 
 
-            <li><a class="has-arrow ai-icon" href="javascript:void()" aria-expanded="false">
+        <li><a class="has-arrow ai-icon" href="javascript:void()" aria-expanded="false">
                 <i class="flaticon-381-internet"></i>
                 <span class="nav-text">inventory</span>
             </a>
