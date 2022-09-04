@@ -49,6 +49,8 @@ Route::get('/dashboard', [App\Http\Controllers\dashboard\DashboardController::cl
 Route::controller(UserController::class)->group(function(){
 
     Route::get('user','index')->name('users.index');
+    Route::get('user/{id}','edit')->name('users.edit');
+
 
 
 });

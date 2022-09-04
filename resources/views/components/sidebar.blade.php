@@ -15,8 +15,8 @@
                 </a>
 
             </li>
-            <li><a class="has-arrow ai-icon" href="javascript:void()" aria-expanded="false">
-                <i class="flaticon-381-user"></i>
+        <li><a class="has-arrow ai-icon" href="javascript:void()" aria-expanded="false">
+                <i class="lni lni-users"></i>
                 <span class="nav-text">users</span>
             </a>
             <ul aria-expanded="false">
@@ -24,6 +24,7 @@
 
 
             </ul>
+
         </li>
             <li><a  href="#" aria-expanded="false">
                     <i class="flaticon-381-television"></i>
