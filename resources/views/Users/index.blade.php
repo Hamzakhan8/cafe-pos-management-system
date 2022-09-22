@@ -55,8 +55,9 @@
                                         <td>{{$users->updated_at}}</td>
                                         <td>
                                             <div class="d-flex">
-                                                <a href="{{route('users.edit',['id'=>$users->id])}}" class="btn btn-primary shadow btn-xs sharp mr-1"><i class="fa fa-pencil"></i>
-                                                <a href="#" class="btn btn-primary shadow btn-xs sharp mr-1"><i class="fa fa-trash"></i>
+                                                <a href="{{route('user.edit',['id'=>$users->id])}}" class="btn btn-success shadow btn-xs sharp mr-1"><i class="fa fa-edit"></i></a>
+
+                                                <a href="{{route('user.delete',['id'=>$users->id])}}" class="btn btn-danger shadow btn-xs sharp mr-1"><i class="fa fa-trash"></i></a>
 
 
 

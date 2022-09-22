@@ -5,6 +5,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Auth\LoginController;
 use App\Http\Controllers\Auth\RegisterController;
 use App\Http\Controllers\dashboard\Usercontroller;
+use App\Http\Controllers\dashboard\UserController as DashboardUserController;
 
 /*
 |--------------------------------------------------------------------------
@@ -46,13 +47,20 @@ Route::prefix('auth')->group(function (){
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 Route::middleware('auth','isAdmin')->group(function(){
 Route::get('/dashboard', [App\Http\Controllers\dashboard\DashboardController::class, 'index'])->name('dashboard.index');
+
 Route::controller(UserController::class)->group(function(){
 
-    Route::get('user','index')->name('users.index');
-    Route::get('user/{id}','edit')->name('users.edit');
+    Route::get('user','index')->name('user.index');
+
+    Route::get('user-edit/{id}','edit')->name('user.edit');
+    Route::post('user-update/{id}','update')->name('user.update');
+    Route::get('user-delete/{id}','destroy')->name('user.delete');
+
+
 
 
 
 });
 });
+
 

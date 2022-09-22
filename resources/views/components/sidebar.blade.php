@@ -20,7 +20,7 @@
                 <span class="nav-text">users</span>
             </a>
             <ul aria-expanded="false">
-                <li><a href="{{route('users.index')}}">Viewusers</a></li>
+                <li><a href="{{route('user.index')}}">Viewusers</a></li>
 
 
             </ul>

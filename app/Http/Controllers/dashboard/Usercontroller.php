@@ -2,12 +2,11 @@
 
 namespace App\Http\Controllers\dashboard;
 
-use App\Models\User;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
-use Illuminate\Support\Facades\Auth;
+use Illuminate\Foundation\Auth\User;
 
-class Usercontroller extends Controller
+class UserController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -61,7 +60,7 @@ class Usercontroller extends Controller
     public function edit($id)
     {
 
-       $user=User::get();
+       $user=User::find($id);
        return view('Users.edit',compact('user'));
     }
 
@@ -74,7 +73,8 @@ class Usercontroller extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+
+        
     }
 
     /**
@@ -85,6 +85,11 @@ class Usercontroller extends Controller
      */
     public function destroy($id)
     {
-        //
+        $delete = User::findOrFail($id);
+
+        $delete->delete();
+
+        return redirect()->route('user.index')
+        ->with('deleted', 'The users has been deleted');
     }
 }

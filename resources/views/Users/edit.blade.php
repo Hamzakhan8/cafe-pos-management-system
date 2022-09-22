@@ -25,9 +25,13 @@
                     <div class="card-header">
                         <h4 class="card-title">Update Users Role</h4>
                     </div>
+
                     <div class="card-body">
+
                         <div class="form-validation">
-                            <form class="form-valide" action="#" method="post">
+                            <form class="form-valide" action="{{route('user.update',['id'=>$user->id])}}" method="post">
+                                @csrf
+                                @method('PUT')
                                 <div class="row">
                                     <div class="col-xl-6">
                                         <div class="form-group row">
@@ -35,7 +39,7 @@
                                                 <span class="text-danger">*</span>
                                             </label>
                                             <div class="col-lg-6">
-                                                <input type="text" class="form-control" disabled id="val-username" name="name" value="{{Auth::user()->name}}">
+                                                <input type="text" class="form-control" disabled id="val-username" name="name" value="{{$user->name}}">
                                             </div>
                                         </div>
                                         <div class="form-group row">
@@ -43,7 +47,7 @@
                                                     class="text-danger">*</span>
                                             </label>
                                             <div class="col-lg-6">
-                                                <input type="text" class="form-control" disabled id="val-email" name="email" value="{{Auth::user()->email}}">
+                                                <input type="text" class="form-control" disabled id="val-email" name="email" value="{{$user->email}}">
                                             </div>
                                         </div>
                                     </div>
@@ -53,12 +57,16 @@
                                                 <span class="text-danger">*</span>
                                             </label>
                                             <div class="col-lg-6">
-                                                <select class="form-control" id="val-skill" name="role">
-                                                    <option value="">{{Auth::user()->role }}</option>
-                                                    <option value="1">SuperAdmin</option>
-                                                    <option value="2">salesperson</option>
+                                                @php
 
-                                                    <option value="3">inventory</option>
+                                                @endphp
+                                                <select class="form-control" id="val-skill" name="role">
+                                                    <option value="">{{$user->role }}</option>
+
+                                                    <option value="SuperAdmin">SuperAdmin</option>
+                                                    <option value="salesperson">salesperson</option>
+
+                                                    <option value="inventory">inventory</option>
 
 
 
