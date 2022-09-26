@@ -15,18 +15,18 @@
                 </a>
 
             </li>
-        <li><a class="has-arrow ai-icon" href="javascript:void()" aria-expanded="false">
-                <i class="lni lni-users"></i>
-                <span class="nav-text">users</span>
+            <li><a class="has-arrow ai-icon" href="javascript:void()" aria-expanded="false">
+                <i class="flaticon-381-internet"></i>
+                <span class="nav-text">Product</span>
             </a>
             <ul aria-expanded="false">
-                <li><a href="{{route('user.index')}}">Viewusers</a></li>
 
+                <li><a href="{{route('product.index')}}">ViewProduct</a></li>
 
             </ul>
-
         </li>
-            <li><a  href="#" aria-expanded="false">
+
+            <li><a  href="{{route('pos.index')}}" aria-expanded="false">
                     <i class="flaticon-381-television"></i>
                     <span class="nav-text">POS</span>
                 </a>
@@ -36,29 +36,18 @@
 
         <li><a class="has-arrow ai-icon" href="javascript:void()" aria-expanded="false">
                 <i class="flaticon-381-internet"></i>
-                <span class="nav-text">inventory</span>
+                <span class="nav-text">Inventory</span>
             </a>
             <ul aria-expanded="false">
-                <li><a href="./ui-typography.html">Typography</a></li>
-                <li><a href="./ui-pagination.html">Pagination</a></li>
-                <li><a href="./ui-grid.html">Grid</a></li>
+                <li><a href="{{route('inventory.index')}}">ViewInventory</a></li>
+
 
             </ul>
         </li>
-        <li><a class="has-arrow ai-icon" href="javascript:void()" aria-expanded="false">
-            <i class="flaticon-381-internet"></i>
-            <span class="nav-text">product</span>
-        </a>
-        <ul aria-expanded="false">
-            <li><a href="./ui-typography.html">Typography</a></li>
-            <li><a href="./ui-pagination.html">Pagination</a></li>
-            <li><a href="./ui-grid.html">Grid</a></li>
 
-        </ul>
-     </li>
      <li><a class="has-arrow ai-icon" href="javascript:void()" aria-expanded="false">
         <i class="flaticon-381-internet"></i>
-        <span class="nav-text">reports</span>
+        <span class="nav-text">Reports</span>
          </a>
         <ul aria-expanded="false">
         <li><a href="./ui-typography.html">Typography</a></li>
@@ -67,7 +56,17 @@
 
         </ul>
         </li>
+        <li><a class="has-arrow ai-icon" href="javascript:void()" aria-expanded="false">
+            <i class="lni lni-users"></i>
+            <span class="nav-text">Users</span>
+        </a>
+        <ul aria-expanded="false">
+            <li><a href="{{route('user.index')}}">Viewusers</a></li>
 
+
+        </ul>
+
+    </li>
             {{-- <li><a class="has-arrow ai-icon" href="javascript:void()" aria-expanded="false">
                     <i class="flaticon-381-heart"></i>
                     <span class="nav-text">Plugins</span>

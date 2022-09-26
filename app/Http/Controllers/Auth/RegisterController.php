@@ -79,7 +79,7 @@ class RegisterController extends Controller
 
         ]);
 
-        return redirect()->route('auth.register.show')
+        return redirect()->route('auth.login.show')
         ->with('now_login', 'Your are now registered, please SignIn!');
     }
 }

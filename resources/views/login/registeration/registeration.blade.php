@@ -30,11 +30,7 @@
                         <div class="row no-gutters">
                             <div class="col-xl-12">
                                 <div class="auth-form">
-                                @if(Session::has('now_login'))
-                                    <div class="alert alert-success" role="alert">
-                                        <strong>{{ Session::get('now_login') }}</strong>
-                                    </div>
-                                @endif
+
                                     <h4 class="text-center mb-4">Sign in your account</h4>
                                     <form action="{{route('auth.register')}}" method="post" enctype="multipart/form-data">
                                         @csrf

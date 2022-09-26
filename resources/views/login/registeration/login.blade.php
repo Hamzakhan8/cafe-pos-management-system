@@ -17,11 +17,7 @@
     </head>
 
 <body class="h-100">
-    @if (Session::has('login_error'))
-    <div class="alert alert-danger" role="alert">
-        <strong>{{ Session::get('login_error') }}</strong>
-    </div>
-    @endif
+
     <div class="authincation h-100">
         <div class="container h-100">
             <div class="row justify-content-center h-100 align-items-center">
@@ -32,8 +28,36 @@
                                 <div class="auth-form">
 
                                     <h4 class="text-center mb-4">Sign in your account</h4>
+                                    
+                                    @if ($errors && (is_array($errors) || $errors->all()))
+                                    <div class="alert alert-danger" role="alert">
+                                        <strong class="text-danger">Errors encounteded!</strong>
+                                        <br>
+                                        <ul>
+                                            @foreach ((is_array($errors) ? $errors : $errors->all()) as $error)
+                                            <li>
+                                                <strong>{{ $error }}</strong>
+                                            </li>
+                                            @endforeach
+                                        </ul>
+                                    </div>
+
+                                    @elseif (Session::has('login_error'))
+                                    <div class="alert alert-danger" role="alert">
+                                        <strong>{{ Session::get('login_error') }}</strong>
+                                    </div>
+                                    @elseif (Session::has('now_login'))
+                                    <div class="alert alert-success" role="alert">
+                                        <strong>{{ Session::get('now_login') }}</strong>
+                                    </div>
+                                    @elseif (Session::has('pass_error'))
+                                    <div class="alert alert-danger" role="alert">
+                                        <strong>{{ Session::get('pass_error') }}</strong>
+                                    </div>
+                                    @endif
                                     <form action="{{route('auth.login')}}" method="post" enctype="multipart/form-data">
                                         @csrf
+
                                         <div class="form-group">
                                             <label class="mb-1"><strong>Email</strong></label>
                                             <input type="email" name="email" class="form-control" value="admin@gmail.com">

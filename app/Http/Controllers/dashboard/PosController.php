@@ -14,7 +14,7 @@ class PosController extends Controller
      */
     public function index()
     {
-        //
+        return view('POS.index');
     }
 
     /**

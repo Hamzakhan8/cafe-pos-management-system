@@ -4,6 +4,9 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Auth\LoginController;
 use App\Http\Controllers\Auth\RegisterController;
+use App\Http\Controllers\dashboard\InventoryController;
+use App\Http\Controllers\dashboard\PosController;
+use App\Http\Controllers\dashboard\ProductController;
 use App\Http\Controllers\dashboard\Usercontroller;
 use App\Http\Controllers\dashboard\UserController as DashboardUserController;
 
@@ -55,11 +58,21 @@ Route::controller(UserController::class)->group(function(){
     Route::get('user-edit/{id}','edit')->name('user.edit');
     Route::post('user-update/{id}','update')->name('user.update');
     Route::get('user-delete/{id}','destroy')->name('user.delete');
+});
 
+Route::controller(InventoryController::class)->group(function(){
 
+    Route::get('inventory-view','index')->name('inventory.index');
+});
 
+Route::controller(ProductController::class)->group(function(){
 
+    Route::get('product','index')->name('product.index');
+});
 
+Route::controller(PosController::class)->group(function(){
+
+    Route::get('Pos-index','index')->name('pos.index');
 });
 });
 
